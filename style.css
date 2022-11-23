@@ -1,0 +1,159 @@
+:root {
+  /* Primary */
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: 163, 165, 174;
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+html,
+body {
+  margin: 0 auto;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: var(--very-dark-blue);
+  height: 100vh;
+  background-color: var(--very-light-gray);
+}
+
+main {
+  margin: 4rem auto;
+  padding: 0 2rem;
+  max-width: 375px;
+  display: grid;
+  gap: 2rem;
+  place-items: center;
+}
+
+.card-wrapper {
+  display: grid;
+  gap: 2rem;
+}
+
+section {
+  display: grid;
+}
+
+section h2 {
+  margin: 0 0 0.5rem 0;
+}
+
+section p {
+  font-weight: 400;
+  margin: 0;
+  color: rgb(var(--grayish-blue));
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 1px 10px 15px 0px rgba(var(--grayish-blue), 0.3);
+  overflow: hidden;
+  scale: 100%;
+  transition: all 300ms;
+  max-width: 320px;
+}
+
+.card:hover {
+  scale: 105%;
+}
+
+img {
+  width: 48px;
+  height: auto;
+  place-self: end;
+  margin-top: 4rem;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title span {
+  font-weight: 200;
+}
+
+.supervisor {
+  border-top: 4px solid var(--cyan);
+}
+
+.team-builder {
+  border-top: 4px solid var(--red);
+}
+
+.karma {
+  border-top: 4px solid var(--orange);
+}
+
+.calculator {
+  border-top: 4px solid var(--blue);
+}
+
+.attribution {
+  font-size: small;
+  text-align: center;
+  color: rgb(--grayish-blue);
+}
+
+.attribution a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.attribution a:nth-child(1) {
+  color: var(--cyan);
+}
+
+.attribution a:nth-child(2) {
+  color: var(--orange);
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    max-width: 1440px;
+  }
+
+  .title {
+    margin: 0 0 2rem 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+
+  .title > p {
+    width: 35rem;
+  }
+
+  .card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 10rem;
+  }
+
+  .card {
+    max-width: 320px;
+  }
+
+  img {
+    width: 60px;
+    margin-top: 3rem;
+  }
+  .supervisor {
+    grid-area: 1 / 1 / 3 / 2;
+    height: fit-content;
+    place-self: center;
+  }
+
+  .calculator {
+    grid-area: 1 / 3 / 3 /4;
+    height: fit-content;
+    place-self: center;
+  }
+}
