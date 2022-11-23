@@ -51,6 +51,7 @@ section p {
 
 .card {
   padding: 2rem;
+  background-color: white;
   border-radius: 5px;
   box-shadow: 1px 10px 15px 0px rgba(var(--grayish-blue), 0.3);
   overflow: hidden;
